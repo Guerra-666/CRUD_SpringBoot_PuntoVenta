@@ -12,12 +12,12 @@ public class InventarioModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_inventario")  // Asegúrate de que el nombre de la columna sea correcto
+    @Column(name = "id_inventario")  // Define el nombre de la columna para la clave primaria
     private Integer id;
 
     @Column
-    private int cantidad;
+    private int cantidad;  // Columna para almacenar la cantidad en inventario
     @Column
-    private int id_lote;
+    private int id_lote;   // Columna para almacenar el ID del lote asociado al inventario
 
 }

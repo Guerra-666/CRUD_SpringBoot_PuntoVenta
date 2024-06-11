@@ -32,7 +32,7 @@ public class MovimientosService {
     public MovimientosModel updateByID(MovimientosModel request, int id){
         MovimientosModel movimientos = MovimientosRepository.findById(Integer.valueOf(id)).get();
 
-        movimientos.setFecha_movimiento(request.getFecha_movimiento());
+        movimientos.setFechaMovimiento(request.getFechaMovimiento());
         movimientos.setCantidad(request.getCantidad());
 
         return movimientos;

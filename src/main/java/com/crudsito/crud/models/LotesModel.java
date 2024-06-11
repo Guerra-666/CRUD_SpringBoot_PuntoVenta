@@ -1,4 +1,5 @@
 package com.crudsito.crud.models;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -14,16 +15,19 @@ public class LotesModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_lote")  // Asegúrate de que el nombre de la columna sea correcto
+    @Column(name = "id_lote")  // Define el nombre de la columna para la clave primaria
     private int id;
 
+    @Column(name = "id_producto")  // Define el nombre de la columna para el ID del producto asociado
+    private int idProducto;  // Cambia el nombre de la variable para seguir las convenciones de nomenclatura de Java
+
     @Column
-    private int id_producto;
+    private LocalDateTime caducidad;  // Columna para almacenar la fecha de caducidad del lote
+
     @Column
-    private LocalDateTime caducidad;
-    @Column
-    private int piezas;
-    @Column(precision = 10, scale = 2)
-    private BigDecimal precio_compra;
+    private int piezas;  // Columna para almacenar la cantidad de piezas en el lote
+
+    @Column(precision = 10, scale = 2)  // Define precisión y escala para el precio de compra
+    private BigDecimal precio_compra;  // Cambia el nombre de la variable para seguir las convenciones de nomenclatura de Java
 
 }

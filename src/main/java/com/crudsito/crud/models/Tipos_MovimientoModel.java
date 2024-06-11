@@ -12,10 +12,10 @@ public class Tipos_MovimientoModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_tipo_movimiento")  // Asegúrate de que el nombre de la columna sea correcto
+    @Column(name = "id_tipo_movimiento")  // Define el nombre de la columna para la clave primaria
     private int id;
 
-    @Column(length = 50)
+    @Column(length = 50)  // Limita la longitud de la columna para el nombre del tipo de movimiento a 50 caracteres
     private String nombre;
 
 }

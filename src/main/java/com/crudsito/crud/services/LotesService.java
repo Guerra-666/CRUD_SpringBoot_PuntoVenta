@@ -35,7 +35,7 @@ public class LotesService {
         LotesModel lotes = lotesRepository.findById(Integer.valueOf(id)).get();
 
         lotes.setCaducidad(request.getCaducidad());
-        lotes.setId_producto(request.getId_producto());
+        lotes.setIdProducto(request.getIdProducto());
         lotes.setPiezas(request.getPiezas());
         lotes.setPrecio_compra(request.getPrecio_compra());
 
