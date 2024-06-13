@@ -1,7 +1,5 @@
 package com.crudsito.crud.models;
-
 import java.time.LocalDateTime;
-
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,10 +21,10 @@ public class MovimientosModel {
     @Column(name = "id_tipo_movimiento")  // Define el nombre de la columna para el ID del tipo de movimiento
     private int idTipoMovimiento;  // Cambia el nombre de la variable para seguir las convenciones de nomenclatura de Java
 
-    @Column(name = "fecha_movimiento")  // Define el nombre de la columna para la fecha de movimiento
+    @Column(name = "fecha_movimiento", nullable = false)  // Define el nombre de la columna para la fecha de movimiento
     private LocalDateTime fechaMovimiento;  // Cambia el nombre de la variable para seguir las convenciones de nomenclatura de Java
 
-    @Column
+    @Column(nullable = false)
     private int cantidad;  // Columna para almacenar la cantidad de productos movidos
 
 }

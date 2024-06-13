@@ -14,10 +14,8 @@ public class InventarioModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_inventario")  // Define el nombre de la columna para la clave primaria
     private Integer id;
-
     @Column
     private int cantidad;  // Columna para almacenar la cantidad en inventario
     @Column
     private int id_lote;   // Columna para almacenar el ID del lote asociado al inventario
-
 }

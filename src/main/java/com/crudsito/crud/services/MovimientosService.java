@@ -6,8 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.sql.Date;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Optional;
+
+import static com.fasterxml.jackson.databind.type.LogicalType.DateTime;
 
 @Service
 public class MovimientosService {
@@ -22,8 +26,13 @@ public class MovimientosService {
     }
 
     public MovimientosModel saveMovimientos(MovimientosModel movimientos){
+        // Validación adicional para asegurarse de que la fecha no sea nula
+        if (movimientos.getFechaMovimiento() == null) {
+            movimientos.setFechaMovimiento(LocalDateTime.now());
+        }
         return MovimientosRepository.save(movimientos);
     }
+
 
     public Optional<MovimientosModel> getById(int id){
         return MovimientosRepository.findById(Integer.valueOf(id));
