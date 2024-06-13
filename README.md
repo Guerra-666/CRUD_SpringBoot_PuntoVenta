@@ -3,7 +3,7 @@
 #### Introducción
 Este proyecto está diseñado para gestionar productos y sus características en una base de datos. Utiliza el framework Spring Boot, que facilita el desarrollo de aplicaciones Java con una configuración mínima y ofrece una estructura organizada basada en el patrón de diseño MVC (Modelo-Vista-Controlador).
 
-A continuación, se describe cada componente principal del proyecto: Modelos, Controladores, Repositorios, Servicios y Requests.
+Componentes principales del proyecto: Modelos, Controladores, Repositorios, Servicios y Requests.
 
 ### Modelo
 Los modelos representan las entidades de la base de datos. Cada modelo corresponde a una tabla en la base de datos y define los campos y las relaciones entre las tablas.
@@ -181,16 +181,3 @@ public class ProductoCompletoRequest {
 **Explicación:**
 - `@Getter` y `@Setter`: Lombok genera automáticamente los métodos getter y setter.
 - `ProductoCompletoRequest`: Agrupa varios modelos en un solo objeto de solicitud, útil para operaciones que involucran múltiples entidades.
-
-### Justificación de Spring Boot
-Spring Boot se elige por varias razones:
-- **Configuración Mínima**: Simplifica la configuración de proyectos Spring mediante convenciones predeterminadas.
-- **Eficiencia**: Permite a los desarrolladores centrarse en la lógica de negocio en lugar de la configuración de la infraestructura.
-- **Escalabilidad**: Ideal para aplicaciones que necesitan crecer en términos de funcionalidad y usuarios.
-- **Comunidad y Soporte**: Gran cantidad de recursos y soporte de la comunidad, facilitando la resolución de problemas y la obtención de ayuda.
-- **Integración**: Facilita la integración con otros marcos y bibliotecas populares en el ecosistema Java.
-
-### Conclusión
-Este proyecto ejemplifica cómo estructurar una aplicación en Spring Boot utilizando el patrón MVC, con modelos para representar entidades, controladores para manejar solicitudes HTTP, 
-repositorios para realizar operaciones en la base de datos y servicios para contener la lógica de negocio. Además, las clases de request permiten agrupar y validar datos de entrada.
-Spring Boot es una excelente elección para desarrollar aplicaciones robustas y escalables de manera eficiente.
